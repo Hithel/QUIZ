@@ -1,9 +1,10 @@
 import Pregunta from "./Pregunta.js";
-// import renderListado from "./renderListado.js";
+import renderListado from "./renderListado.js";
 
 export default class ListadoPreguntas extends Pregunta {
     constructor(){
-        this.lista = {};
+        super({pregunta,A,B,C,D,correcta});
+        this.lista = [];
     }
 
     agregarPregunta(pregunta){
@@ -11,7 +12,7 @@ export default class ListadoPreguntas extends Pregunta {
     }
 
     mostrarPreguntas(){
-        // renderListado(this.lista);
-        console.log(this.lista);
+        renderListado(this.lista);
+        return console.log(this.lista);
     }
 }
