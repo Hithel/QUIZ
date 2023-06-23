@@ -13,6 +13,15 @@ export default class ListadoPreguntas extends Pregunta {
 
     mostrarPreguntas(){
         renderListado(this.lista);
-        return console.log(this.lista);
+    }
+    
+    eliminarPreguntas(index){
+        this.lista.splice(index, 1)
+        renderListado(this.lista);
+    }
+    modificarPreguntas(index, data){
+        debugger
+        this.lista.splice(index, 1, data)
+        console.log(this.lista);
     }
 }
