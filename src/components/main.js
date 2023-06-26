@@ -3,9 +3,12 @@ import ListadoPreguntas from "./ListadoPreguntas.js"
 
 
 const form = document.querySelector('#form');
-const form2 = document.querySelector('#form2');
+const formActualizar = document.querySelector("#formActualizar")
 const DivPreguntas = document.querySelector("#DivPreguntas")
 const listadoPreguntas = new ListadoPreguntas();
+
+listadoPreguntas.mostrarPreguntas()
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -16,9 +19,9 @@ form.addEventListener('submit', (e) => {
     
     listadoPreguntas.agregarPregunta(pregunta);
 
-    listadoPreguntas.mostrarPreguntas();
-    form.reset();
 });
+
+listadoPreguntas.mostrarPreguntas()
 
 DivPreguntas.addEventListener('click', (e) => {
     e.preventDefault();
@@ -29,15 +32,15 @@ DivPreguntas.addEventListener('click', (e) => {
     let accion = e.target.dataset.accion;
 
     if (accion === "Eliminar"){
-        listadoPreguntas.eliminarPreguntas(id);
+        listadoPreguntas.eliminarPreguntas(id,div);
     }
-    else if (accion === "Modificar"){
-        form2.addEventListener("submit", (e) => {
-            e.preventDefault();
-            let data = Object.fromEntries(new FormData(e.target));
 
-            console.log(data);
-        })
-
+    else if(accion === "Actualizar"){
+        formActualizar.addEventListener("submit", (e) => {
+          e.preventDefault();
+          let data = Object.fromEntries(new FormData(e.target));
+          listadoPreguntas.modificarPreguntas(id,data);
+        });  
     }
 })
+listadoPreguntas.mostrarPreguntas();

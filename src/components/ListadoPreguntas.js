@@ -1,27 +1,26 @@
+import {postPregunta,getPreguntas,deletePreguntas,actualizarPreguntas} from "./peticiones/peticiones.js";
+
+
 import Pregunta from "./Pregunta.js";
 import renderListado from "./renderListado.js";
 
 export default class ListadoPreguntas extends Pregunta {
     constructor(){
         super({pregunta,A,B,C,D,correcta});
-        this.lista = [];
     }
 
     agregarPregunta(pregunta){
-        this.lista.push(pregunta);
+        postPregunta(pregunta)
     }
 
     mostrarPreguntas(){
-        renderListado(this.lista);
+        getPreguntas()
     }
     
-    eliminarPreguntas(index){
-        this.lista.splice(index, 1)
-        renderListado(this.lista);
+    eliminarPreguntas(id,div){
+        deletePreguntas(id,div)
     }
-    modificarPreguntas(index, data){
-        debugger
-        this.lista.splice(index, 1, data)
-        console.log(this.lista);
+    modificarPreguntas(id, data){
+        actualizarPreguntas(id,data)
     }
 }

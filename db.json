@@ -1,0 +1,22 @@
+{
+  "preguntas": [
+    {
+      "pregunta": "quien soy 2",
+      "A": "yo no",
+      "B": "yo xD",
+      "C": "._.",
+      "D": ":)",
+      "correcta": "B",
+      "id": 2
+    },
+    {
+      "pregunta": "quien soy 3",
+      "A": "yo no",
+      "B": "yo xD",
+      "C": "._.",
+      "D": ":)",
+      "correcta": "B",
+      "id": 3
+    }
+  ]
+}
