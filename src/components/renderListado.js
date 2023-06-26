@@ -15,7 +15,6 @@ export default function renderListado (lista) {
                 <option value="">${item.C}</option>
                 <option value="">${item.D}</option>
             </select>
-            
             <input type="submit" data-accion="Eliminar" value="Eliminar" class="btn-guardar bg-danger border-0 rounded bg-secondary px-2 mt-3">
             <input type="button" data-bs-toggle="modal" data-bs-target="#modalModificar"  data-accion="Actualizar" value="Actualizar" class="btn-guardar bg-warning border-0 rounded bg-secondary px-2">
         `;
