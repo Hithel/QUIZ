@@ -1,5 +1,6 @@
 import renderListado from "../renderListado.js";
-import renerQuiz from "../pageQuiz/renderQuiz.js"
+import renerQuiz from "../pageQuiz/renderQuiz.js";
+import validacion from "../pageQuiz/validacion.js";
 
 const URL = "http://localhost:3000"
 const headers = new Headers ({'Content-Type': 'application/json'});
@@ -54,5 +55,5 @@ export async function getPreguntasQuiz(){
 export async function CompararPreguntas(data){
 
     let preguntas = await (await fetch(`${URL}/preguntas`)).json();
-    
+    validacion(data,preguntas);
 }
