@@ -1,22 +1,22 @@
 {
   "preguntas": [
     {
-      "pregunta": "quien soy 2",
-      "A": "yo no",
+      "pregunta": "Quien soy yo",
+      "A": "yo no ",
       "B": "yo xD",
-      "C": "._.",
-      "D": ":)",
+      "C": ":(",
+      "D": ">:(",
       "correcta": "B",
-      "id": 2
+      "id": 1
     },
     {
-      "pregunta": "quien soy 3",
-      "A": "yo no",
-      "B": "yo xD",
-      "C": "._.",
-      "D": ":)",
-      "correcta": "B",
-      "id": 3
+      "pregunta": "Quien soy yo",
+      "A": "yo no ",
+      "B": ":(",
+      "C": "yo xD",
+      "D": ">:(",
+      "correcta": "C",
+      "id": 2
     }
   ]
 }

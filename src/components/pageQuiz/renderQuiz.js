@@ -6,7 +6,7 @@ export default function renerQuiz(data){
         div.setAttribute("class", "mt-4");
         div.innerHTML = `
         <h1>${item.pregunta}</h1>
-        <select class="form-select mt-2" id="pregunta ${item.id}" name="pregunta ${item.id}">
+        <select class="form-select mt-2" id="${item.id}" name="${item.id}">
                 <option value="A">A: ${item.A}</option>
                 <option value="B">B: ${item.B}</option>
                 <option value="C">C: ${item.C}</option>
